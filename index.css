@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -13,10 +14,111 @@ h6 {
   font-family: "Josefin Sans", sans-serif;
 }
 
-p {
+p,
+a,
+li {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities */
 .list-unstyled {
   list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Start Navbar */
+header {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25px;
+  padding: 20px 0;
+}
+
+.navbar {
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.navbar .menu {
+  flex-direction: column;
+  gap: 20px;
+  max-height: 1000px;
+  padding: 30px 25px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  transition: padding 0.5s;
+}
+
+.navbar ul.close {
+  max-height: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  cursor: pointer;
+}
+
+.navbar ul li .fa-plus {
+  font-size: 13px;
+}
+
+.navbar ul li ul {
+  margin-top: 10px;
+  text-indent: 20px;
+}
+
+.navbar ul li ul.close {
+  height: 0;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+.menu-btn {
+  border: none;
+  outline: none;
+  padding: 0;
+  background: none;
+  font-size: 35px;
+  color: #ff2020;
+  cursor: pointer;
+}
+
+header .right-icons {
+  position: absolute;
+  right: 5px;
+  bottom: -40px;
+  gap: 20px;
+  font-size: 20px;
+}
+
+header .right-icons li {
+  cursor: pointer;
+}
+
+/* Start Hero */
+.hero {
+  height: 500px;
+  background-color: #f0f0f2;
 }

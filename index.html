@@ -21,32 +21,81 @@
   </head>
   <body>
     <!-- Start Navbar -->
-    <header>
+    <header class="flex">
       <div class="logo">
         <img src="./assets/img/logo.png" alt="logo" />
       </div>
-      <nav>
-        <ul class="list-unstyled">
-          <li>Home</li>
-          <li>Shope</li>
-          <li>About</li>
-          <li>Latest</li>
-          <li>Blog</li>
-          <li>Pages</li>
-          <li>Contact</li>
+      <nav id="navbar" class="navbar">
+        <ul class="menu list-unstyled flex close" id="menu">
+          <li>
+            <a link="/">Home</a>
+          </li>
+          <li>
+            <a link="/">Shope</a>
+          </li>
+          <li>
+            <a link="/">About</a>
+          </li>
+          <li>
+            <span class="flex justify-between">
+              Latest
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-minus hidden"></i>
+            </span>
+            <ul class="list-unstyled close">
+              <li>extra</li>
+            </ul>
+          </li>
+          <li>
+            <span class="flex justify-between">
+              Blog
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-minus hidden"></i>
+            </span>
+            <ul class="list-unstyled close">
+              <li>extra</li>
+            </ul>
+          </li>
+          <li>
+            <span class="flex justify-between">
+              Pages
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-minus hidden"></i>
+            </span>
+            <ul class="list-unstyled close">
+              <li>extra</li>
+            </ul>
+          </li>
+          <li>
+            <a link="/">Contact</a>
+          </li>
         </ul>
       </nav>
-      <ul class="list-unstyled">
+      <button class="menu-btn" id="menu-btn">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+      </button>
+      <ul class="flex list-unstyled right-icons">
         <li>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="/">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-user"></i>
+          <a href="/">
+            <i class="fa-solid fa-user"></i>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
         </li>
       </ul>
     </header>
+    <main>
+      <section class="hero"></section>
+    </main>
+    <!-- Scripts -->
+    <script src="./index.js"></script>
   </body>
 </html>
