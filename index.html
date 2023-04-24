@@ -23,58 +23,78 @@
     <!-- Start Navbar -->
     <header class="flex">
       <div class="logo">
-        <img src="./assets/img/logo.png" alt="logo" />
+        <a href="/" class="block">
+          <img src="./assets/img/logo.png" alt="logo" />
+        </a>
       </div>
       <nav id="navbar" class="navbar">
-        <ul class="menu list-unstyled flex close" id="menu">
+        <ul class="menu list--unstyled flex close" id="menu">
           <li>
-            <a link="/">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a link="/">Shope</a>
+            <a href="/">Shop</a>
           </li>
           <li>
-            <a link="/">About</a>
+            <a href="/">About</a>
           </li>
-          <li>
-            <span class="flex justify-between">
+          <li class="sub__menu__toggler hot">
+            <span class="flex justify--between">
               Latest
               <i class="fa-solid fa-plus"></i>
               <i class="fa-solid fa-minus hidden"></i>
             </span>
-            <ul class="list-unstyled close">
-              <li>extra</li>
+            <ul class="flex sub__menu list--unstyled close">
+              <li>
+                <a href="/">Product List</a>
+              </li>
+              <li>
+                <a href="/">Product Details</a>
+              </li>
             </ul>
           </li>
-          <li>
-            <span class="flex justify-between">
+          <li class="sub__menu__toggler">
+            <span class="flex justify--between">
               Blog
               <i class="fa-solid fa-plus"></i>
               <i class="fa-solid fa-minus hidden"></i>
             </span>
-            <ul class="list-unstyled close">
-              <li>extra</li>
+            <ul class="flex sub__menu list--unstyled close">
+              <li>
+                <a href="/">Blog</a>
+              </li>
+              <li>
+                <a href="/">Blog Details</a>
+              </li>
             </ul>
           </li>
-          <li>
-            <span class="flex justify-between">
+          <li class="sub__menu__toggler">
+            <span class="flex justify--between">
               Pages
               <i class="fa-solid fa-plus"></i>
               <i class="fa-solid fa-minus hidden"></i>
             </span>
-            <ul class="list-unstyled close">
-              <li>extra</li>
+            <ul class="flex sub__menu list--unstyled close">
+              <li>
+                <a href="/">Login</a>
+              </li>
+              <li>
+                <a href="/">Cart</a>
+              </li>
+              <li>
+                <a href="/">Element</a>
+              </li>
             </ul>
           </li>
           <li>
-            <a link="/">Contact</a>
+            <a href="/">Contact</a>
           </li>
         </ul>
       </nav>
-      <button class="menu-btn" id="menu-btn">
+      <button class="menu__toggler" id="menu__toggler">
         <i class="fa-sharp fa-solid fa-bars"></i>
       </button>
-      <ul class="flex list-unstyled right-icons">
+      <ul class="flex list--unstyled right__icons">
         <li>
           <a href="/">
             <i class="fa-solid fa-magnifying-glass"></i>

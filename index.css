@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.3s;
 }
 
 h1,
@@ -26,15 +27,19 @@ a {
 }
 
 /* Utilities */
-.list-unstyled {
+.list--unstyled {
   list-style: none;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
   display: flex;
 }
 
-.justify-between {
+.justify--between {
   justify-content: space-between;
 }
 
@@ -42,17 +47,31 @@ a {
   display: none !important;
 }
 
+.hot::after {
+  content: "Hot";
+  display: block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background-color: #ff003c;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 12px;
+  border-radius: 7px;
+  box-shadow: 0 0 2px #4a0000;
+}
+
 /* Start Navbar */
 header {
+  padding: 20px 25px;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25px;
-  padding: 20px 0;
 }
 
 .navbar {
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   position: absolute;
   top: 100%;
@@ -61,41 +80,7 @@ header {
   z-index: 2;
 }
 
-.navbar .menu {
-  flex-direction: column;
-  gap: 20px;
-  max-height: 1000px;
-  padding: 30px 25px;
-  overflow: hidden;
-  transition: max-height 0.5s;
-  transition: padding 0.5s;
-}
-
-.navbar ul.close {
-  max-height: 0;
-  padding: 0;
-}
-
-.navbar ul li {
-  cursor: pointer;
-}
-
-.navbar ul li .fa-plus {
-  font-size: 13px;
-}
-
-.navbar ul li ul {
-  margin-top: 10px;
-  text-indent: 20px;
-}
-
-.navbar ul li ul.close {
-  height: 0;
-  margin-top: 0px;
-  overflow: hidden;
-}
-
-.menu-btn {
+.menu__toggler {
   border: none;
   outline: none;
   padding: 0;
@@ -105,16 +90,176 @@ header {
   cursor: pointer;
 }
 
-header .right-icons {
+.navbar .menu {
+  flex-direction: column;
+  gap: 20px;
+  max-height: 1500px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.navbar .menu.close {
+  max-height: 0;
+}
+
+.navbar .menu > li {
+  position: relative;
+  cursor: pointer;
+  padding: 0 25px;
+}
+
+.navbar .menu > li:first-child {
+  padding-top: 30px;
+}
+
+.navbar .menu > li:last-child {
+  padding-bottom: 30px;
+}
+
+.navbar .menu li .fa-plus {
+  font-size: 13px;
+}
+
+.navbar .menu li .sub__menu {
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  text-indent: 20px;
+  max-height: 1500px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navbar .menu li ul.sub__menu.close {
+  max-height: 0;
+  margin-top: 0px;
+}
+
+.navbar .menu li::after {
+  display: none;
+}
+
+header .right__icons {
   position: absolute;
-  right: 5px;
+  right: 25px;
   bottom: -40px;
   gap: 20px;
   font-size: 20px;
 }
 
-header .right-icons li {
+header .right__icons li {
   cursor: pointer;
+}
+
+@media screen and (min-width: 991px) {
+  header {
+    padding: 20px 45px;
+  }
+
+  .menu__toggler {
+    display: none;
+  }
+
+  .navbar {
+    position: static;
+    transform: translate(0%);
+    padding: 23px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar .menu {
+    flex-direction: row;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .navbar .menu.close {
+    max-height: 1500px;
+  }
+
+  .navbar .menu > li:hover {
+    color: #ff2020;
+  }
+
+  .navbar .menu > li:first-child {
+    padding-top: 0;
+  }
+
+  .navbar .menu > li:last-child {
+    padding-bottom: 0;
+  }
+  
+  .navbar .menu li a,
+  .navbar .menu li span {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+
+  .navbar .menu .fa-plus,
+  .navbar .menu .fa-minus {
+    display: none;
+  }
+
+  .navbar .menu li .sub__menu {
+    padding: 20px 0;
+    min-width: 180px;
+    position: absolute;
+    top: 210%;
+    left: 0;
+    background-color: white;
+    border-top: 2px solid #ff2020;
+    border-radius: 10px;
+    overflow: visible;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+  }
+
+  .navbar .menu li.sub__menu__toggler:hover .sub__menu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar .menu li .sub__menu::before {
+    content: "";
+    display: block;
+    width: 5px;
+    border: 8px solid #ff2020;
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    transform: rotate(-90deg);
+  }
+
+  .navbar .menu li ul.sub__menu.close {
+    max-height: 1500px;
+  }
+
+  .navbar .menu li ul.sub__menu li a {
+    color: #0b1c39;
+  }
+
+  .navbar .menu li ul.sub__menu li a:hover {
+    color: #ff2020;
+  }
+
+  .navbar .menu li::after {
+    display: block;
+  }
+
+  header .right__icons {
+    position: static;
+    z-index: 2;
+    gap: 30px;
+  }
+
+  header .right__icons a:hover {
+    color: #ff2020;
+  }
 }
 
 /* Start Hero */
