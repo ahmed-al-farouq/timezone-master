@@ -13,23 +13,26 @@ h4,
 h5,
 h6 {
   font-family: "Josefin Sans", sans-serif;
-  user-select: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 p,
 a,
 li {
   font-family: "Roboto", sans-serif;
-  user-select: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  user-select: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Utilities */
@@ -38,6 +41,17 @@ a {
   max-width: 960px;
   height: 100%;
   margin: 0 auto;
+}
+
+.sr--only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .list--unstyled {
@@ -101,8 +115,9 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   overflow: hidden;
-  user-select: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   z-index: 1;
 }
 
@@ -215,7 +230,6 @@ header .right__icons li {
 }
 
 @media screen and (min-width: 991px) {
-  
 }
 
 /* Start Hero */
@@ -226,7 +240,7 @@ header .right__icons li {
   overflow: hidden;
 }
 
-.hero .container {
+.hero .hero__content {
   overflow: hidden;
 }
 
@@ -261,8 +275,25 @@ header .right__icons li {
 
 .hero .hero__img {
   display: none;
+  position: relative;
+  right: -100px;
   animation: pulse 1s infinite alternate;
-  margin-right: 10px;
+}
+
+/* Start New Arrivals */
+.new-arrivals {
+  margin-top: 120px;
+}
+
+.new-arrivals .new-arrivals__title {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.new-arrivals .new-arrivals__products {
+  flex-wrap: wrap;
 }
 
 /* Start Media Queries
@@ -315,12 +346,11 @@ header .right__icons li {
   .navbar .menu > li:last-child {
     padding-bottom: 0;
   }
-  
+
   .navbar .menu li a,
   .navbar .menu li span {
     font-family: "Josefin Sans", sans-serif;
   }
-
 
   .navbar .menu .fa-plus,
   .navbar .menu .fa-minus {
@@ -339,7 +369,7 @@ header .right__icons li {
     overflow: visible;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
   }
 
   .navbar .menu li.sub__menu__toggler:hover .sub__menu {
@@ -394,7 +424,7 @@ header .right__icons li {
 }
 
 /* Styles for tablet and above screens */
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /* Start Hero */
   .hero .hero__content .hero__title {
     font-size: 96px;

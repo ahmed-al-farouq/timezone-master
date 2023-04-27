@@ -1,3 +1,6 @@
+import _ from "lodash";
+import "./styles/index.css";
+
 // Navbar
 const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menu__toggler");
