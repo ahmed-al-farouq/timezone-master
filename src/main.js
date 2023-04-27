@@ -1,5 +1,12 @@
-import _ from "lodash";
 import "./styles/index.css";
+import navbar from "./components/navbar";
+import hero from "./components/hero";
+import newArrivals from "./components/newArrivals";
+
+// Components
+navbar();
+hero();
+newArrivals();
 
 // Navbar
 const menu = document.getElementById("menu");

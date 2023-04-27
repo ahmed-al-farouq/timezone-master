@@ -11,7 +11,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a,
+span {
   font-family: "Josefin Sans", sans-serif;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -19,7 +21,6 @@ h6 {
 }
 
 p,
-a,
 li {
   font-family: "Roboto", sans-serif;
   -moz-user-select: none;
@@ -282,7 +283,7 @@ header .right__icons li {
 
 /* Start New Arrivals */
 .new-arrivals {
-  margin-top: 120px;
+  margin: 120px 0;
 }
 
 .new-arrivals .new-arrivals__title {
@@ -294,6 +295,45 @@ header .right__icons li {
 
 .new-arrivals .new-arrivals__products {
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.new-arrivals
+  .new-arrivals__products
+  .new-arrivals__product
+  .new-arrivals__product__title
+  a {
+  display: block;
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 20px 0 12px 0;
+}
+
+.new-arrivals
+  .new-arrivals__products
+  .new-arrivals__product
+  .new-arrivals__product__img {
+  overflow: hidden;
+}
+
+.new-arrivals
+  .new-arrivals__products
+  .new-arrivals__product
+  .new-arrivals__product__img:hover
+  img {
+  transform: scale(1.04);
+  transition: 0.4s ease-out;
+}
+
+.new-arrivals
+  .new-arrivals__products
+  .new-arrivals__product
+  .new-arrivals__product__price {
+  color: #ff2020;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
 }
 
 /* Start Media Queries
@@ -420,6 +460,11 @@ header .right__icons li {
   /* Start Hero */
   .hero .container {
     justify-content: space-between;
+  }
+
+  /* Start New Arrivals */
+  .new-arrivals .new-arrivals__products {
+    gap: 5px;
   }
 }
 
