@@ -20,7 +20,7 @@ const newArrivals = () => {
     {
       title: "Thermo Ball Etip Gloves",
       url: "/",
-      img: product2,
+      img: product3,
       price: "45,743",
     },
   ];
@@ -28,28 +28,30 @@ const newArrivals = () => {
   <section class="new-arrivals">
     <div class="container">
       <h2 class="new-arrivals__title">New Arrivals</h2>
-      <div class="new-arrivals__products flex justify--between">
-      ${products.map(
-        (product) => `
+      <div class="new-arrivals__products grid justify--between">
+      ${products.map((product) =>
+        `
         <div class="new-arrivals__product">
-        <div class="new-arrivals__product__img">
-          <a href="${product.url}" class="block">
-            <img
-              src="${product.img}"
-              alt="${product.title}"
-            />
-          </a>
+          <div class="new-arrivals__product__img">
+            <a href="${product.url}" class="block">
+              <img
+                src="${product.img}"
+                alt="${product.title}"
+              />
+            </a>
+          </div>
+          <h3 class="new-arrivals__product__title">
+            <a href="${product.url}">${product.title}</a>
+          </h3>
+          <span class="new-arrivals__product__price">$ ${product.price}</span>
         </div>
-        <h3 class="new-arrivals__product__title">
-          <a href="/">${product.title}</a>
-        </h3>
-        <span class="new-arrivals__product__price">$ ${product.price}</span>
-      </div>`
-      )}
+        `
+      ).join("")}
       </div>
     </div>
   </section>
   `;
+  console.log(temp.content.cloneNode(true));
   return document.getElementById("js-main").appendChild(temp.content);
 };
 
