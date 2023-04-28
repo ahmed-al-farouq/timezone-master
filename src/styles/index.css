@@ -349,9 +349,30 @@ header .right__icons li {
 
 /* Start Media Queries
 ********************************************************/
+@media screen and (min-width: 576px) {
+  /* Start Utilities */
+  .container {
+    max-width: 550px;
+  }
+
+  /* Start Hero */
+  .hero .hero__btn {
+    margin-top: 0;
+  }
+
+  /* Start New Arrivals */
+  .new-arrivals .new-arrivals__products {
+    grid-template: auto / auto auto;
+  }
+}
 
 /* Styles for tablet and above screens */
 @media screen and (min-width: 768px) {
+  /* Start Utilities */
+  .container {
+    max-width: 765px;
+  }
+
   /* Start Hero */
   .hero .hero__content .hero__title {
     font-size: 96px;
@@ -378,6 +399,11 @@ header .right__icons li {
 
 /* Styles for desktop and above */
 @media screen and (min-width: 992px) {
+  /* Start Utilities */
+  .container {
+    max-width: 960px;
+  }
+
   /* Start Navbar */
   header {
     padding: 20px 45px;
@@ -501,39 +527,6 @@ header .right__icons li {
 
   .new-arrivals .new-arrivals__products {
     grid-template: auto / auto auto auto;
-  }
-}
-
-/* Style for desktop screens */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* Start Utilities */
-  .container {
-    max-width: 960px;
-  }
-}
-
-/* Styles for tablet screens */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  /* Start Utilities */
-  .container {
-    max-width: 765px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  /* Start Utilities */
-  .container {
-    max-width: 550px;
-  }
-
-  /* Start Hero */
-  .hero .hero__btn {
-    margin-top: 0;
-  }
-
-  /* Start New Arrivals */
-  .new-arrivals .new-arrivals__products {
-    grid-template: auto / auto auto;
   }
 }
 
