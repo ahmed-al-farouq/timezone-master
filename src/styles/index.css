@@ -158,6 +158,10 @@ header {
   align-items: center;
 }
 
+header .logo img {
+  width: 132px;
+}
+
 .navbar {
   background-color: #fff;
   width: 100%;
@@ -517,6 +521,7 @@ header .right__icons li {
 
   header .right__icons {
     position: static;
+    transform: none
   }
 
   /* Start Hero */
