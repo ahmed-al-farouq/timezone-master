@@ -51,7 +51,6 @@ const newArrivals = () => {
     </div>
   </section>
   `;
-  console.log(temp.content.cloneNode(true));
   return document.getElementById("js-main").appendChild(temp.content);
 };
 
