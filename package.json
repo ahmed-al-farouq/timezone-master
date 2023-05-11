@@ -31,6 +31,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.1",
     "lodash": "^4.17.21"
   }
