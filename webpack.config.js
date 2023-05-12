@@ -1,10 +1,9 @@
-require = require("esm")(module/*, options*/);
-import * as path from "path";
-import * as HtmlWebpackPlugin from "html-webpack-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
     main: path.resolve(__dirname, "./src/main.js"),
   },
