@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "pattern": "/",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "src": "dist/index.html"
+    }
+  ],
+  "build": {
+    "command": "npm run build",
+    "environment": {
+      "API_KEY": "abcdef123456"
+    },
+    "publish": "dist",
+    "output": "dist",
+    "commandOrigin": "project"
+  }
+}
