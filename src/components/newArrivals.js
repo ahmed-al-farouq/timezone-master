@@ -28,7 +28,7 @@ const newArrivals = () => {
   <section class="new-arrivals">
     <div class="container">
       <h2 class="new-arrivals__title">New Arrivals</h2>
-      <div class="new-arrivals__products grid justify--between">
+      <div class="new-arrivals__products grid">
       ${products.map((product) =>
         `
         <div class="new-arrivals__product">
