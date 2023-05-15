@@ -11,6 +11,7 @@ import navbar from "./components/navbar";
 import hero from "./components/hero";
 import newArrivals from "./components/newArrivals";
 import gallery from "./components/gallery";
+import popularItems from "./components/popularItems";
 
 // Components
 navbar();
@@ -39,6 +40,7 @@ gallery(
   1,
   20
 );
+popularItems();
 
 // Navbar
 const header = document.getElementsByTagName("header")[0];
@@ -63,7 +65,7 @@ window.addEventListener("scroll", () => {
 
       return setTimeout(() => (header.style.opacity = 1), 800);
     }
-    
+
     header.classList.add("relative");
     header.classList.remove("fixed");
 

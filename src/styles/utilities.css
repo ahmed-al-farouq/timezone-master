@@ -1,12 +1,4 @@
 /* Utilities */
-.container {
-  width: 100%;
-  max-width: 960px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .sr--only {
   position: absolute;
   width: 1px;
@@ -78,22 +70,25 @@
 }
 
 .btn {
-  position: relative;
+  display: block;
   width: 150px;
   min-width: 150px;
-  display: block;
-  padding: 15px 20px;
-  background-color: #ff2020;
-  color: #fff;
-  outline: none;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 0;
+  position: relative;
+  padding: 30px 28px;
+  background-color: #ff2020;
+  color: #fff;
+  outline: none;
+  border: none;
   overflow: hidden;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -108,8 +103,8 @@
   background-color: #4a4a4b;
   transform-origin: 0 0;
   transform: scaleX(0);
-  transition: 0.5s;
   z-index: -1;
+  transition: 0.4s cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 
 .btn:hover::before {
