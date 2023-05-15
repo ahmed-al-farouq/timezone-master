@@ -48,9 +48,9 @@ const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menu__toggler");
 const subMenuToggler = document.querySelectorAll(".sub__menu__toggler");
 
-// Make Navbar Fixed after reaching specific point
-window.addEventListener("scroll", () => {
+const switchFixedNav = () => {
   // Check if screen is bigger than medium
+  console.log(window.innerWidth);
   if (window.innerWidth > 992) {
     // Check if user scrolled more than 200px
     if (window.scrollY > 200) {
@@ -71,7 +71,14 @@ window.addEventListener("scroll", () => {
 
     return setTimeout(() => (header.style.opacity = 1), 700);
   }
-});
+  if (header.classList.contains("fixed")) {
+    header.classList.remove("fixed");
+  }
+};
+
+// Make Navbar Fixed after reaching specific point
+window.addEventListener("scroll", switchFixedNav);
+window.addEventListener("resize", switchFixedNav);
 
 // Toggle Navbar
 menuBtn.addEventListener("click", () => {
