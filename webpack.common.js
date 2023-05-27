@@ -6,7 +6,13 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, "./src/index.js"),
+        app: path.resolve(__dirname, "./src/index.js")
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: "assets/img/[name][ext]",
+        clean: true,
     },
     module: {
         rules: [
@@ -40,14 +46,9 @@ module.exports = {
         }),
         new MiniCssExtractPlugin()
     ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: "assets/img/[name][ext]",
-        clean: true,
-    },
     optimization: {
         minimizer: [
+            '...',
             new CssMinimizerPlugin(),
         ],
         minimize: true,
