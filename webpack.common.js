@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: {
@@ -11,27 +10,29 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader"],
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
-
-            // {
-            //     test: /\.(?:js|mjs|cjs)$/,
-            //     exclude: /node_modules/,
-            //     use: {
-            //         loader: "babel-loader",
-            //         options: {
-            //             presets: [["@babel/preset-env", { targets: "defaults" }]],
-            //         },
-            //     },
-            //     generator: {
-            //         filename: "assets/js/[name].bundle.[contenthash].js",
-            //     },
-            // },
+            {
+                test: /\.(?:js|mjs|cjs)$/,
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', { targets: "defaults" }]
+                        ],
+                    }
+                },
+            },
         ],
+    },
+    resolve: {
+        extensions: ['*', '.js']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -45,7 +46,6 @@ module.exports = {
                 },
             ],
         }),
-        new MiniCssExtractPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
@@ -53,4 +53,9 @@ module.exports = {
         assetModuleFilename: "assets/img/[name][ext]",
         clean: true,
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        }
+    }
 };
