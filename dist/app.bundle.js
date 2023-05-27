@@ -1,1 +1,267 @@
-(()=>{"use strict";var n={771:(n,e,t)=>{t.d(e,{Z:()=>l});var r=t(81),a=t.n(r),i=t(645),o=t.n(i)()(a());o.push([n.id,'/* Global */\n.container {\n  width: 100%;\n  max-width: 960px;\n  height: 100%;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  transition: 0.3s;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\na,\nspan {\n  font-family: "Josefin Sans", sans-serif;\n  -moz-user-select: none;\n  -webkit-user-select: none;\n  user-select: none;\n}\n\np,\nli {\n  font-family: "Roboto", sans-serif;\n  -moz-user-select: none;\n  -webkit-user-select: none;\n  user-select: none;\n}\n\na {\n  text-decoration: none;\n  color: inherit;\n  -moz-user-select: none;\n  -webkit-user-select: none;\n  user-select: none;\n}\n\nimg {\n  width: 100%;\n}\n\n/* Start Navbar */\nheader {\n  padding: 20px 25px;\n  position: relative;\n  top: 0;\n  left: 0;\n  right: 0;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  z-index: 2;\n  transition: 0.8s;\n}\n\nheader.fixed {\n  -webkit-box-shadow: 0 10px 15px rgba(25,25,25,0.1);\n  box-shadow: 0 10px 15px rgba(25,25,25,0.1);\n}\n\nheader .logo img {\n  width: 132px;\n}\n\n.navbar {\n  background-color: #fff;\n  width: 100%;\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 2;\n}\n\n.menu__toggler {\n  border: none;\n  outline: none;\n  padding: 0;\n  background: none;\n  font-size: 35px;\n  color: #ff2020;\n  cursor: pointer;\n}\n\n.navbar .menu {\n  flex-direction: column;\n  gap: 20px;\n  max-height: 1500px;\n  overflow: hidden;\n  transition: max-height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n}\n\n.navbar .menu.close {\n  max-height: 0;\n}\n\n.navbar .menu > li {\n  position: relative;\n  cursor: pointer;\n  padding: 0 25px;\n}\n\n.navbar .menu > li:first-child {\n  padding-top: 30px;\n}\n\n.navbar .menu > li:last-child {\n  padding-bottom: 30px;\n}\n\n.navbar .menu li .fa-plus {\n  font-size: 13px;\n}\n\n.navbar .menu li .sub__menu {\n  flex-direction: column;\n  gap: 10px;\n  margin-top: 10px;\n  text-indent: 20px;\n  max-height: 1500px;\n  transition: 0.5s;\n  overflow: hidden;\n}\n\n.navbar .menu li ul.sub__menu.close {\n  max-height: 0;\n  margin-top: 0px;\n}\n\n.navbar .menu li::after {\n  display: none;\n}\n\nheader .right__icons {\n  position: absolute;\n  right: 25px;\n  bottom: -40px;\n  gap: 20px;\n  font-size: 20px;\n}\n\nheader .right__icons li {\n  cursor: pointer;\n}\n\n/* Start Hero */\n.hero {\n  min-height: 400px;\n  background-color: #f0f0f2;\n  overflow: hidden;\n}\n\n.hero .hero__content {\n  overflow: hidden;\n}\n\n.hero .hero__content .hero__title {\n  position: relative;\n  color: #0b1c39;\n  font-size: 33px;\n  line-height: 1.2;\n  margin-bottom: 18px;\n  animation: fading-slide-in 1s;\n}\n\n.hero .hero__content .hero__desc {\n  position: relative;\n  color: #212025;\n  font-size: 17px;\n  line-height: 1.6;\n  margin-bottom: 18px;\n  animation: fading-slide-in 1s 0.1s;\n}\n\n.hero .hero__btn {\n  position: relative;\n  background-color: #4a4a4b;\n  margin-top: 26px;\n  animation: fading-slide-in 1s 0.2s;\n}\n\n.hero .hero__btn::before {\n  background-color: #ff2020;\n}\n\n.hero .hero__img {\n  display: none;\n  position: relative;\n  animation: pulse 1s infinite alternate;\n}\n\n/* Start New Arrivals */\n.new-arrivals {\n  margin: 120px 0;\n}\n\n.new-arrivals .new-arrivals__title {\n  margin-bottom: 30px;\n  font-size: 35px;\n  font-weight: 700;\n  line-height: 1;\n}\n\n.new-arrivals .new-arrivals__products {\n  justify-content: center;\n  grid-template: auto / auto;\n  text-align: center;\n  gap: 20px;\n}\n\n.new-arrivals\n  .new-arrivals__products\n  .new-arrivals__product\n  .new-arrivals__product__title\n  a {\n  display: block;\n  width: 100%;\n  color: #444444;\n  font-weight: 700;\n  font-size: 18px;\n  margin: 20px 0 12px 0;\n}\n\n.new-arrivals\n  .new-arrivals__products\n  .new-arrivals__product\n  .new-arrivals__product__img {\n  overflow: hidden;\n}\n\n.new-arrivals\n  .new-arrivals__products\n  .new-arrivals__product\n  .new-arrivals__product__img:hover\n  img {\n  transform: scale(1.04);\n  transition: 0.4s ease-out;\n}\n\n.new-arrivals\n  .new-arrivals__products\n  .new-arrivals__product\n  .new-arrivals__product__price {\n  color: #ff2020;\n  font-size: 18px;\n  font-weight: 500;\n  display: block;\n}\n\n/* Start Gallery */\n.gallery {\n  min-height: 700px;\n  display: grid;\n  grid-template-columns: 1;\n  grid-gap: 30px;\n  margin: 40px 0;\n}\n\n.gallery .gallery__item {\n  overflow: hidden;\n  position: relative;\n}\n\n.gallery .gallery__item::before {\n  content: "";\n  display: block;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(1, 10, 28, 0.3);\n  z-index: 1;\n  opacity: 0;\n  transition: all 0.3s linear;\n}\n\n.gallery .gallery__item:hover::before {\n  opacity: 1;\n}\n\n.gallery .gallery__item img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  transform: scale(1.03);\n  transition-timing-function: linear;\n}\n\n.gallery .gallery__item:hover img {\n  transform: scale(1);\n}\n\n/* Start Popular Items */\n.popular {\n  text-align: center;\n  margin: 150px 0;\n}\n\n.popular .popular__header {\n  margin: auto;\n}\n\n.popular .popular__header .popular__title {\n  font-size: 48px;\n  font-weight: 700;\n  line-height: 1.2;\n}\n\n.popular .popular__header .popular__desc {\n  color: #777;\n  font-size: 16px;\n  line-height: 30px;\n  margin-bottom: 15px;\n}\n\n.popular .popular__products {\n  margin-top: 60px;\n  grid-template-columns: auto;\n  gap: 50px;\n}\n\n.popular .popular__products .popular__product .popular__product__body {\n  position: relative;\n}\n\n.popular\n  .popular__products\n  .popular__product\n  .popular__product__body\n  .fa-heart {\n  font-size: 30px;\n  position: absolute;\n  top: 20px;\n  right: 20px;\n  cursor: pointer;\n  opacity: 0;\n}\n\n.popular\n  .popular__products\n  .popular__product\n  .popular__product__body:hover\n  .fa-heart {\n  opacity: 1;\n}\n\n.popular\n  .popular__products\n  .popular__product\n  .popular__product__body\n  .popular__btn {\n  font-size: 16px;\n  text-transform: none;\n  padding: 0;\n  border-bottom: 3px solid #ff2020;\n  width: 100%;\n  height: 0;\n  position: absolute;\n  bottom: 0;\n}\n\n.popular\n  .popular__products\n  .popular__product\n  .popular__product__body:hover\n  .popular__btn {\n  height: 15%;\n  max-height: 1000px;\n  padding: 12px 0;\n}\n\n.popular\n  .popular__products\n  .popular__product\n  .popular__product__body\n  .popular__btn:hover::before {\n  display: none;\n}\n\n.popular .popular__products .popular__product .popular__product__title {\n  color: #444444;\n  font-weight: 700;\n  font-size: 20px;\n  margin: 15px 0;\n}\n\n.popular .popular__products .popular__product .popular__product__price {\n  color: #444444;\n  font-size: 20px;\n}\n\n.popular .popular__more__btn {\n  margin: auto;\n  margin-top: 50px;\n  width: 250px;\n}\n/* Start Media Queries\n********************************************************/\n@media screen and (min-width: 576px) {\n  /* Start Utilities */\n  .container {\n    max-width: 550px;\n  }\n\n  /* Start Hero */\n  .hero .hero__btn {\n    margin-top: 0;\n  }\n\n  /* Start New Arrivals */\n  .new-arrivals .new-arrivals__products {\n    grid-template: auto / auto auto;\n  }\n\n  /* Start Gallery */\n  .gallery {\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: repeat(5, 1fr);\n  }\n\n  .gallery .gallery__item:nth-child(1) {\n    grid-column: 1 / span 1;\n    grid-row: 1 / span 3;\n  }\n\n  .gallery .gallery__item:nth-child(2) {\n    grid-column: 2 / span 1;\n    grid-row: 1 / span 3;\n  }\n\n  .gallery .gallery__item:nth-child(3) {\n    grid-column: 1 / span 1;\n    grid-row: 4 / span 2;\n  }\n\n  .gallery .gallery__item:nth-child(4) {\n    grid-column: 2 / span 1;\n    grid-row: 4 / span 2;\n  }\n}\n\n/* Styles for tablet and above screens */\n@media screen and (min-width: 768px) {\n  /* Start Utilities */\n  .container {\n    max-width: 765px;\n  }\n\n  /* Start Navbar */\n  header .right__icons {\n    top: 50%;\n    right: 120px;\n    bottom: unset;\n    transform: translateY(-50%);\n  }\n\n  header .right__icons a:hover {\n    color: #ff2020;\n  }\n\n  /* Start Hero */\n  .hero .hero__content .hero__title {\n    font-size: 50px;\n    font-weight: 700;\n  }\n\n  .hero .hero__img {\n    display: block;\n  }\n\n  /* Start New Arrivals */\n  .new-arrivals .new-arrivals__title {\n    font-size: 48px;\n  }\n\n  .new-arrivals .new-arrivals__products {\n    grid-template: auto / auto auto auto;\n  }\n\n  .new-arrivals\n    .new-arrivals__products\n    .new-arrivals__product\n    .new-arrivals__product__title\n    a {\n    font-size: 24px;\n  }\n\n  /* Start Popular Items  */\n  .popular .popular__products {\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: repeat(3, 1fr);\n  }\n\n  .popular .popular__header {\n    max-width: 83.333333%;\n  }\n\n  .popular .popular__products .popular__product .popular__product__title {\n    font-size: 24px;\n  }\n\n  .popular .popular__products .popular__product .popular__product__price {\n    font-size: 18px;\n  }\n}\n\n/* Styles for desktop and above */\n@media screen and (min-width: 992px) {\n  /* Start Utilities */\n  .container {\n    max-width: 960px;\n  }\n\n  /* Start Navbar */\n  header {\n    padding: 20px 45px;\n  }\n\n  .menu__toggler {\n    display: none;\n  }\n\n  .navbar {\n    position: static;\n    transform: translate(0%);\n    padding: 23px 20px;\n    display: flex;\n    justify-content: center;\n  }\n\n  .navbar .menu {\n    flex-direction: row;\n    gap: 0;\n    overflow: visible;\n  }\n\n  .navbar .menu.close {\n    max-height: 1500px;\n  }\n\n  .navbar .menu > li:hover {\n    color: #ff2020;\n  }\n\n  .navbar .menu > li:first-child {\n    padding-top: 0;\n  }\n\n  .navbar .menu > li:last-child {\n    padding-bottom: 0;\n  }\n\n  .navbar .menu li a,\n  .navbar .menu li span {\n    font-family: "Josefin Sans", sans-serif;\n  }\n\n  .navbar .menu .fa-plus,\n  .navbar .menu .fa-minus {\n    display: none;\n  }\n\n  .navbar .menu li .sub__menu {\n    padding: 20px 0;\n    min-width: 180px;\n    position: absolute;\n    top: 210%;\n    left: 0;\n    background-color: white;\n    border-top: 2px solid #ff2020;\n    border-radius: 10px;\n    overflow: visible;\n    visibility: hidden;\n    opacity: 0;\n    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);\n  }\n\n  .navbar .menu li.sub__menu__toggler:hover .sub__menu {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  .navbar .menu li .sub__menu::before {\n    content: "";\n    display: block;\n    width: 5px;\n    border: 8px solid #ff2020;\n    border-bottom-color: #fff;\n    border-top-color: #fff;\n    border-right-color: #fff;\n    position: absolute;\n    top: -20px;\n    left: 25px;\n    transform: rotate(-90deg);\n  }\n\n  .navbar .menu li ul.sub__menu.close {\n    max-height: 1500px;\n  }\n\n  .navbar .menu li ul.sub__menu li a {\n    color: #0b1c39;\n  }\n\n  .navbar .menu li ul.sub__menu li a:hover {\n    color: #ff2020;\n  }\n\n  .navbar .menu li::after {\n    display: block;\n  }\n\n  header .right__icons {\n    position: static;\n    transform: none;\n  }\n\n  /* Start Hero */\n  .hero .hero__content .hero__title {\n    font-size: 60px;\n  }\n\n  .hero .container {\n    justify-content: space-between;\n  }\n\n  .hero .hero__img {\n    width: 50%;\n    right: -100px;\n  }\n\n  /* Start Gallery */\n  .gallery {\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(2, 1fr);\n  }\n\n  .gallery .gallery__item:nth-child(1) {\n    grid-column: 1 / span 2;\n    grid-row: 1 / span 2;\n  }\n\n  .gallery .gallery__item:nth-child(2) {\n    grid-column: 3 / span 1;\n    grid-row: 1 / span 2;\n  }\n\n  .gallery .gallery__item:nth-child(3) {\n    grid-column: 4 / span 1;\n    grid-row: 1 / span 1;\n  }\n\n  .gallery .gallery__item:nth-child(4) {\n    grid-column: 4 / span 1;\n    grid-row: 2 / span 1;\n  }\n\n  /* Start Popular Items  */\n  .popular .popular__products {\n    grid-template-columns: repeat(3, 1fr);\n    grid-template-rows: repeat(2, 1fr);\n  }\n}\n\n/* Style for large screens */\n@media screen and (min-width: 1200px) {\n  /* Start Utilities */\n  .container {\n    max-width: 1170px;\n  }\n\n  /* Start Hero */\n  .hero .hero__content .hero__title {\n    font-size: 96px;\n  }\n\n  .hero .hero__img {\n    right: -60px;\n  }\n\n  /* Start New arrivals */\n  .new-arrivals .new-arrivals__products {\n    grid-template: auto / auto auto auto;\n  }\n\n  /* Start Popular Items */\n  .popular .popular__header {\n    max-width: 58.333333%;\n  }\n}\n\n/* Start Animation */\n@keyframes pulse {\n  0% {\n    transform: scale(1);\n  }\n\n  100% {\n    transform: scale(1.05);\n  }\n}\n\n@keyframes fading-slide-in {\n  0% {\n    left: -100%;\n    opacity: 0;\n  }\n\n  50% {\n    opacity: 0;\n  }\n\n  100% {\n    left: 0;\n    opacity: 1;\n  }\n}\n',""]);const l=o},711:(n,e,t)=>{t.d(e,{Z:()=>l});var r=t(81),a=t.n(r),i=t(645),o=t.n(i)()(a());o.push([n.id,'/* Utilities */\n.sr--only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n\n.list--unstyled {\n  list-style: none;\n}\n\n.relative {\n  position: relative;\n}\n\n.fixed {\n  position: fixed;\n}\n\n.block {\n  display: block;\n}\n\n.grid {\n  display: grid;\n}\n\n.flex {\n  display: flex;\n}\n\n.flex--column {\n  flex-direction: column;\n}\n\n.justify--between {\n  justify-content: space-between;\n}\n\n.justify--center {\n  justify-content: center;\n}\n\n.align--center {\n  align-items: center;\n}\n\n.hidden {\n  display: none;\n}\n\n.hot::after {\n  content: "Hot";\n  display: block;\n  padding: 5px 10px;\n  position: absolute;\n  top: -30px;\n  right: 0;\n  background-color: #ff003c;\n  color: #fff;\n  font-family: "Josefin Sans", sans-serif;\n  font-size: 12px;\n  border-radius: 7px;\n  box-shadow: 0 0 2px #4a0000;\n}\n\n.btn {\n  display: block;\n  width: 150px;\n  min-width: 150px;\n  text-align: center;\n  font-family: "Josefin Sans", sans-serif;\n  font-weight: 600;\n  text-transform: uppercase;\n  line-height: 0;\n  position: relative;\n  padding: 30px 28px;\n  background-color: #ff2020;\n  color: #fff;\n  outline: none;\n  border: none;\n  overflow: hidden;\n  -moz-user-select: none;\n  -webkit-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  z-index: 1;\n}\n\n.btn::before {\n  content: "";\n  display: block;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: #4a4a4b;\n  transform-origin: 0 0;\n  transform: scaleX(0);\n  z-index: -1;\n  transition: 0.4s cubic-bezier(0.5, 1.6, 0.4, 0.7);\n}\n\n.btn:hover::before {\n  transform: scaleX(1);\n}\n',""]);const l=o},645:n=>{n.exports=function(n){var e=[];return e.toString=function(){return this.map((function(e){var t="",r=void 0!==e[5];return e[4]&&(t+="@supports (".concat(e[4],") {")),e[2]&&(t+="@media ".concat(e[2]," {")),r&&(t+="@layer".concat(e[5].length>0?" ".concat(e[5]):""," {")),t+=n(e),r&&(t+="}"),e[2]&&(t+="}"),e[4]&&(t+="}"),t})).join("")},e.i=function(n,t,r,a,i){"string"==typeof n&&(n=[[null,n,void 0]]);var o={};if(r)for(var l=0;l<this.length;l++){var s=this[l][0];null!=s&&(o[s]=!0)}for(var p=0;p<n.length;p++){var c=[].concat(n[p]);r&&o[c[0]]||(void 0!==i&&(void 0===c[5]||(c[1]="@layer".concat(c[5].length>0?" ".concat(c[5]):""," {").concat(c[1],"}")),c[5]=i),t&&(c[2]?(c[1]="@media ".concat(c[2]," {").concat(c[1],"}"),c[2]=t):c[2]=t),a&&(c[4]?(c[1]="@supports (".concat(c[4],") {").concat(c[1],"}"),c[4]=a):c[4]="".concat(a)),e.push(c))}},e}},81:n=>{n.exports=function(n){return n[1]}},379:n=>{var e=[];function t(n){for(var t=-1,r=0;r<e.length;r++)if(e[r].identifier===n){t=r;break}return t}function r(n,r){for(var i={},o=[],l=0;l<n.length;l++){var s=n[l],p=r.base?s[0]+r.base:s[0],c=i[p]||0,u="".concat(p," ").concat(c);i[p]=c+1;var d=t(u),m={css:s[1],media:s[2],sourceMap:s[3],supports:s[4],layer:s[5]};if(-1!==d)e[d].references++,e[d].updater(m);else{var _=a(m,r);r.byIndex=l,e.splice(l,0,{identifier:u,updater:_,references:1})}o.push(u)}return o}function a(n,e){var t=e.domAPI(e);return t.update(n),function(e){if(e){if(e.css===n.css&&e.media===n.media&&e.sourceMap===n.sourceMap&&e.supports===n.supports&&e.layer===n.layer)return;t.update(n=e)}else t.remove()}}n.exports=function(n,a){var i=r(n=n||[],a=a||{});return function(n){n=n||[];for(var o=0;o<i.length;o++){var l=t(i[o]);e[l].references--}for(var s=r(n,a),p=0;p<i.length;p++){var c=t(i[p]);0===e[c].references&&(e[c].updater(),e.splice(c,1))}i=s}}},569:n=>{var e={};n.exports=function(n,t){var r=function(n){if(void 0===e[n]){var t=document.querySelector(n);if(window.HTMLIFrameElement&&t instanceof window.HTMLIFrameElement)try{t=t.contentDocument.head}catch(n){t=null}e[n]=t}return e[n]}(n);if(!r)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");r.appendChild(t)}},216:n=>{n.exports=function(n){var e=document.createElement("style");return n.setAttributes(e,n.attributes),n.insert(e,n.options),e}},565:(n,e,t)=>{n.exports=function(n){var e=t.nc;e&&n.setAttribute("nonce",e)}},795:n=>{n.exports=function(n){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var e=n.insertStyleElement(n);return{update:function(t){!function(n,e,t){var r="";t.supports&&(r+="@supports (".concat(t.supports,") {")),t.media&&(r+="@media ".concat(t.media," {"));var a=void 0!==t.layer;a&&(r+="@layer".concat(t.layer.length>0?" ".concat(t.layer):""," {")),r+=t.css,a&&(r+="}"),t.media&&(r+="}"),t.supports&&(r+="}");var i=t.sourceMap;i&&"undefined"!=typeof btoa&&(r+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(i))))," */")),e.styleTagTransform(r,n,e.options)}(e,n,t)},remove:function(){!function(n){if(null===n.parentNode)return!1;n.parentNode.removeChild(n)}(e)}}}},589:n=>{n.exports=function(n,e){if(e.styleSheet)e.styleSheet.cssText=n;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}}},e={};function t(r){var a=e[r];if(void 0!==a)return a.exports;var i=e[r]={id:r,exports:{}};return n[r](i,i.exports,t),i.exports}t.n=n=>{var e=n&&n.__esModule?()=>n.default:()=>n;return t.d(e,{a:e}),e},t.d=(n,e)=>{for(var r in e)t.o(e,r)&&!t.o(n,r)&&Object.defineProperty(n,r,{enumerable:!0,get:e[r]})},t.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(n){if("object"==typeof window)return window}}(),t.o=(n,e)=>Object.prototype.hasOwnProperty.call(n,e),(()=>{var n;t.g.importScripts&&(n=t.g.location+"");var e=t.g.document;if(!n&&e&&(e.currentScript&&(n=e.currentScript.src),!n)){var r=e.getElementsByTagName("script");if(r.length)for(var a=r.length-1;a>-1&&!n;)n=r[a--].src}if(!n)throw new Error("Automatic publicPath is not supported in this browser");n=n.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),t.p=n})(),t.nc=void 0,(()=>{const n=t.p+"assets/img/gallery1.png",e=t.p+"assets/img/gallery2.png",r=t.p+"assets/img/gallery3.png",a=t.p+"assets/img/gallery4.png";var i=t(379),o=t.n(i),l=t(795),s=t.n(l),p=t(569),c=t.n(p),u=t(565),d=t.n(u),m=t(216),_=t.n(m),g=t(589),f=t.n(g),h=t(771),v={};v.styleTagTransform=f(),v.setAttributes=d(),v.insert=c().bind(null,"head"),v.domAPI=s(),v.insertStyleElement=_(),o()(h.Z,v),h.Z&&h.Z.locals&&h.Z.locals;var b=t(711),x={};x.styleTagTransform=f(),x.setAttributes=d(),x.insert=c().bind(null,"head"),x.domAPI=s(),x.insertStyleElement=_(),o()(b.Z,x),b.Z&&b.Z.locals&&b.Z.locals;const y=t.p+"assets/img/logo.png",w=t.p+"assets/img/watch.png",S=t.p+"assets/img/new_product1.png",E=t.p+"assets/img/new_product2.png",k=t.p+"assets/img/new_product3.png",z=t.p+"assets/img/popular1.png",T=t.p+"assets/img/popular2.png",L=t.p+"assets/img/popular3.png",j=t.p+"assets/img/popular4.png",$=t.p+"assets/img/popular5.png",B=t.p+"assets/img/popular6.png";(()=>{const n=document.getElementById("js-main"),e=document.createElement("template");e.innerHTML=`\n    <header class="flex">\n      <div class="logo">\n        <a href="/" class="block">\n          <img src="${y}" alt="logo" />\n        </a>\n      </div>\n      <nav id="navbar" class="navbar">\n        <ul class="menu list--unstyled flex close" id="menu">\n          <li>\n            <a href="/">Home</a>\n          </li>\n          <li>\n            <a href="/">Shop</a>\n          </li>\n          <li>\n            <a href="/">About</a>\n          </li>\n          <li class="sub__menu__toggler hot">\n            <span class="flex justify--between">\n              Latest\n              <i class="fa-solid fa-plus"></i>\n              <i class="fa-solid fa-minus hidden"></i>\n            </span>\n            <ul class="flex sub__menu list--unstyled close">\n              <li>\n                <a href="/">Product List</a>\n              </li>\n              <li>\n                <a href="/">Product Details</a>\n              </li>\n            </ul>\n          </li>\n          <li class="sub__menu__toggler">\n            <span class="flex justify--between">\n              Blog\n              <i class="fa-solid fa-plus"></i>\n              <i class="fa-solid fa-minus hidden"></i>\n            </span>\n            <ul class="flex sub__menu list--unstyled close">\n              <li>\n                <a href="/">Blog</a>\n              </li>\n              <li>\n                <a href="/">Blog Details</a>\n              </li>\n            </ul>\n          </li>\n          <li class="sub__menu__toggler">\n            <span class="flex justify--between">\n              Pages\n              <i class="fa-solid fa-plus"></i>\n              <i class="fa-solid fa-minus hidden"></i>\n            </span>\n            <ul class="flex sub__menu list--unstyled close">\n              <li>\n                <a href="/">Login</a>\n              </li>\n              <li>\n                <a href="/">Cart</a>\n              </li>\n              <li>\n                <a href="/">Element</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <a href="/">Contact</a>\n          </li>\n        </ul>\n      </nav>\n      <ul class="flex list--unstyled right__icons">\n        <li>\n          <a href="/">\n            <span class="sr--only">Search</span>\n            <i class="fa-solid fa-magnifying-glass"></i>\n          </a>\n        </li>\n        <li>\n          <a href="/">\n            <span class="sr--only">Login</span>\n            <i class="fa-solid fa-user"></i>\n          </a>\n        </li>\n        <li>\n          <a href="/">\n            <span class="sr--only">Shopping Cart</span>\n            <i class="fa-solid fa-cart-shopping"></i>\n          </a>\n        </li>\n      </ul>\n      <button type="button" class="menu__toggler" id="menu__toggler">\n        <span class="sr--only">Menu Toggler</span>\n        <i class="fa-sharp fa-solid fa-bars"></i>\n      </button>\n    </header>`,document.body.insertBefore(e.content,n)})(),(()=>{const n=document.createElement("template");n.innerHTML=`\n    <section class="hero flex align--center">\n      <div class="container flex align--center">\n        <div class="hero__content flex flex--column">\n          <h1 class="hero__title">Select Your New Perfect Style</h1>\n          <p class="hero__desc">\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,\n            labore? Placeat modi tempora fugit, nostrum vel sapiente?\n          </p>\n          <a href="/" class="btn hero__btn">Shop Now</a>\n        </div>\n        <div class="hero__img">\n          <img src="${w}" alt="watch" class="block" />\n        </div>\n      </div>\n    </section>\n    `,document.getElementById("js-main").appendChild(n.content)})(),(()=>{const n=document.createElement("template"),e=[{title:"Thermo Ball Etip Gloves",url:"/",img:S,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:E,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:k,price:"45,743"}];n.innerHTML=`\n  <section class="new-arrivals">\n    <div class="container">\n      <h2 class="new-arrivals__title">New Arrivals</h2>\n      <div class="new-arrivals__products grid">\n      ${e.map((n=>`\n        <div class="new-arrivals__product">\n          <div class="new-arrivals__product__img">\n            <a href="${n.url}" class="block">\n              <img\n                src="${n.img}"\n                alt="${n.title}"\n              />\n            </a>\n          </div>\n          <h3 class="new-arrivals__product__title">\n            <a href="${n.url}">${n.title}</a>\n          </h3>\n          <span class="new-arrivals__product__price">$ ${n.price}</span>\n        </div>\n        `)).join("")}\n      </div>\n    </div>\n  </section>\n  `,document.getElementById("js-main").appendChild(n.content)})(),((n,e,t,r)=>{const a=document.getElementById("js-main"),i=document.createElement("template");i.innerHTML=`\n    <section class="gallery grid">\n      ${n.map((n=>`<div class="gallery__item"><img src="${n.url}" alt="${n.alt}" /></div>`)).join("")}\n    </section>\n  `,a.appendChild(i.content)})([{url:n,alt:"gallery1"},{url:e,alt:"gallery2"},{url:r,alt:"gallery3"},{url:a,alt:"gallery4"}]),(()=>{const n=document.createElement("template"),e=[{title:"Thermo Ball Etip Gloves",url:"/",img:z,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:T,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:L,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:j,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:$,price:"45,743"},{title:"Thermo Ball Etip Gloves",url:"/",img:B,price:"45,743"}];n.innerHTML=`\n  <section class="popular">\n    <div class="container">\n      <div class="popular__header">\n        <h2 class="popular__title">Popular Items</h2>\n        <p class="popular__desc">\n          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.\n        </p>\n      </div>\n      <div class="popular__products grid">\n      ${e.map((n=>`\n        <div class="popular__product">\n          <div class="popular__product__body">\n            \x3c!-- <i class="fa-solid fa-heart"></i> --\x3e\n            <i class="fa-regular fa-heart"></i>\n            <div class="popular__product__img">\n              <img\n                src="${n.img}"\n                alt="${n.title}"\n              />\n            </div>\n            <button type="button" class="btn popular__btn">\n              Add to cart\n            </button>\n          </div>\n          <h3 class="popular__product__title">\n            <a href="${n.url}">${n.title}</a>\n          </h3>\n          <span class="popular__product__price">$ ${n.price}</span>\n        </div>\n        `)).join("")}\n      </div>\n      <a href="/" type="button" class="btn popular__more__btn">View more products</a>\n    </div>\n  </section>\n  `,document.getElementById("js-main").appendChild(n.content)})();const I=document.getElementsByTagName("header")[0],A=document.getElementById("menu"),C=document.getElementById("menu__toggler"),M=document.querySelectorAll(".sub__menu__toggler"),N=()=>{if(console.log(window.innerWidth),window.innerWidth>992){if(window.scrollY>200){if(I.classList.contains("fixed"))return;return I.style.opacity=0,setTimeout((()=>{I.classList.remove("relative"),I.classList.add("fixed")}),300),setTimeout((()=>I.style.opacity=1),800)}return I.classList.add("relative"),I.classList.remove("fixed"),setTimeout((()=>I.style.opacity=1),700)}I.classList.contains("fixed")&&I.classList.remove("fixed")};window.addEventListener("scroll",N),window.addEventListener("resize",N),C.addEventListener("click",(()=>{A.classList.toggle("close")})),M.forEach((n=>{n.addEventListener("click",(()=>{if(window.innerWidth>=991)return;const e=n.querySelector(".sub__menu"),t=n.querySelector(".fa-plus"),r=n.querySelector(".fa-minus");t.classList.toggle("hidden"),r.classList.toggle("hidden"),e.classList.toggle("close")}),!0)}))})()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+
+;// CONCATENATED MODULE: ./src/assets/img/gallery1.png
+const gallery1_namespaceObject = __webpack_require__.p + "assets/img/gallery1.png";
+;// CONCATENATED MODULE: ./src/assets/img/gallery2.png
+const gallery2_namespaceObject = __webpack_require__.p + "assets/img/gallery2.png";
+;// CONCATENATED MODULE: ./src/assets/img/gallery3.png
+const gallery3_namespaceObject = __webpack_require__.p + "assets/img/gallery3.png";
+;// CONCATENATED MODULE: ./src/assets/img/gallery4.png
+const gallery4_namespaceObject = __webpack_require__.p + "assets/img/gallery4.png";
+;// CONCATENATED MODULE: ./src/assets/img/logo.png
+const logo_namespaceObject = __webpack_require__.p + "assets/img/logo.png";
+;// CONCATENATED MODULE: ./src/components/navbar.js
+
+var navbar = function navbar() {
+  var main = document.getElementById("js-main");
+  var temp = document.createElement("template");
+  temp.innerHTML = "\n    <header class=\"flex\">\n      <div class=\"logo\">\n        <a href=\"/\" class=\"block\">\n          <img src=\"".concat(logo_namespaceObject, "\" alt=\"logo\" />\n        </a>\n      </div>\n      <nav id=\"navbar\" class=\"navbar\">\n        <ul class=\"menu list--unstyled flex close\" id=\"menu\">\n          <li>\n            <a href=\"/\">Home</a>\n          </li>\n          <li>\n            <a href=\"/\">Shop</a>\n          </li>\n          <li>\n            <a href=\"/\">About</a>\n          </li>\n          <li class=\"sub__menu__toggler hot\">\n            <span class=\"flex justify--between\">\n              Latest\n              <i class=\"fa-solid fa-plus\"></i>\n              <i class=\"fa-solid fa-minus hidden\"></i>\n            </span>\n            <ul class=\"flex sub__menu list--unstyled close\">\n              <li>\n                <a href=\"/\">Product List</a>\n              </li>\n              <li>\n                <a href=\"/\">Product Details</a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"sub__menu__toggler\">\n            <span class=\"flex justify--between\">\n              Blog\n              <i class=\"fa-solid fa-plus\"></i>\n              <i class=\"fa-solid fa-minus hidden\"></i>\n            </span>\n            <ul class=\"flex sub__menu list--unstyled close\">\n              <li>\n                <a href=\"/\">Blog</a>\n              </li>\n              <li>\n                <a href=\"/\">Blog Details</a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"sub__menu__toggler\">\n            <span class=\"flex justify--between\">\n              Pages\n              <i class=\"fa-solid fa-plus\"></i>\n              <i class=\"fa-solid fa-minus hidden\"></i>\n            </span>\n            <ul class=\"flex sub__menu list--unstyled close\">\n              <li>\n                <a href=\"/\">Login</a>\n              </li>\n              <li>\n                <a href=\"/\">Cart</a>\n              </li>\n              <li>\n                <a href=\"/\">Element</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <a href=\"/\">Contact</a>\n          </li>\n        </ul>\n      </nav>\n      <ul class=\"flex list--unstyled right__icons\">\n        <li>\n          <a href=\"/\">\n            <span class=\"sr--only\">Search</span>\n            <i class=\"fa-solid fa-magnifying-glass\"></i>\n          </a>\n        </li>\n        <li>\n          <a href=\"/\">\n            <span class=\"sr--only\">Login</span>\n            <i class=\"fa-solid fa-user\"></i>\n          </a>\n        </li>\n        <li>\n          <a href=\"/\">\n            <span class=\"sr--only\">Shopping Cart</span>\n            <i class=\"fa-solid fa-cart-shopping\"></i>\n          </a>\n        </li>\n      </ul>\n      <button type=\"button\" class=\"menu__toggler\" id=\"menu__toggler\">\n        <span class=\"sr--only\">Menu Toggler</span>\n        <i class=\"fa-sharp fa-solid fa-bars\"></i>\n      </button>\n    </header>");
+  return document.body.insertBefore(temp.content, main);
+};
+/* harmony default export */ const components_navbar = (navbar);
+;// CONCATENATED MODULE: ./src/assets/img/watch.png
+const watch_namespaceObject = __webpack_require__.p + "assets/img/watch.png";
+;// CONCATENATED MODULE: ./src/components/hero.js
+
+var hero = function hero() {
+  var temp = document.createElement("template");
+  temp.innerHTML = "\n    <section class=\"hero flex align--center\">\n      <div class=\"container flex align--center\">\n        <div class=\"hero__content flex flex--column\">\n          <h1 class=\"hero__title\">Select Your New Perfect Style</h1>\n          <p class=\"hero__desc\">\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,\n            labore? Placeat modi tempora fugit, nostrum vel sapiente?\n          </p>\n          <a href=\"/\" class=\"btn hero__btn\">Shop Now</a>\n        </div>\n        <div class=\"hero__img\">\n          <img src=\"".concat(watch_namespaceObject, "\" alt=\"watch\" class=\"block\" />\n        </div>\n      </div>\n    </section>\n    ");
+  return document.getElementById("js-main").appendChild(temp.content);
+};
+/* harmony default export */ const components_hero = (hero);
+;// CONCATENATED MODULE: ./src/assets/img/new_product1.png
+const new_product1_namespaceObject = __webpack_require__.p + "assets/img/new_product1.png";
+;// CONCATENATED MODULE: ./src/assets/img/new_product2.png
+const new_product2_namespaceObject = __webpack_require__.p + "assets/img/new_product2.png";
+;// CONCATENATED MODULE: ./src/assets/img/new_product3.png
+const new_product3_namespaceObject = __webpack_require__.p + "assets/img/new_product3.png";
+;// CONCATENATED MODULE: ./src/components/newArrivals.js
+
+
+
+var newArrivals = function newArrivals() {
+  var temp = document.createElement("template");
+  var products = [{
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: new_product1_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: new_product2_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: new_product3_namespaceObject,
+    price: "45,743"
+  }];
+  temp.innerHTML = "\n  <section class=\"new-arrivals\">\n    <div class=\"container\">\n      <h2 class=\"new-arrivals__title\">New Arrivals</h2>\n      <div class=\"new-arrivals__products grid\">\n      ".concat(products.map(function (product) {
+    return "\n        <div class=\"new-arrivals__product\">\n          <div class=\"new-arrivals__product__img\">\n            <a href=\"".concat(product.url, "\" class=\"block\">\n              <img\n                src=\"").concat(product.img, "\"\n                alt=\"").concat(product.title, "\"\n              />\n            </a>\n          </div>\n          <h3 class=\"new-arrivals__product__title\">\n            <a href=\"").concat(product.url, "\">").concat(product.title, "</a>\n          </h3>\n          <span class=\"new-arrivals__product__price\">$ ").concat(product.price, "</span>\n        </div>\n        ");
+  }).join(""), "\n      </div>\n    </div>\n  </section>\n  ");
+  return document.getElementById("js-main").appendChild(temp.content);
+};
+/* harmony default export */ const components_newArrivals = (newArrivals);
+;// CONCATENATED MODULE: ./src/components/gallery.js
+var gallery = function gallery(photos, rows, columns, gap) {
+  var main = document.getElementById("js-main");
+  var temp = document.createElement("template");
+  temp.innerHTML = "\n    <section class=\"gallery grid\">\n      ".concat(photos.map(function (photo) {
+    return "<div class=\"gallery__item\"><img src=\"".concat(photo.url, "\" alt=\"").concat(photo.alt, "\" /></div>");
+  }).join(''), "\n    </section>\n  ");
+  return main.appendChild(temp.content);
+};
+/* harmony default export */ const components_gallery = (gallery);
+;// CONCATENATED MODULE: ./src/assets/img/popular1.png
+const popular1_namespaceObject = __webpack_require__.p + "assets/img/popular1.png";
+;// CONCATENATED MODULE: ./src/assets/img/popular2.png
+const popular2_namespaceObject = __webpack_require__.p + "assets/img/popular2.png";
+;// CONCATENATED MODULE: ./src/assets/img/popular3.png
+const popular3_namespaceObject = __webpack_require__.p + "assets/img/popular3.png";
+;// CONCATENATED MODULE: ./src/assets/img/popular4.png
+const popular4_namespaceObject = __webpack_require__.p + "assets/img/popular4.png";
+;// CONCATENATED MODULE: ./src/assets/img/popular5.png
+const popular5_namespaceObject = __webpack_require__.p + "assets/img/popular5.png";
+;// CONCATENATED MODULE: ./src/assets/img/popular6.png
+const popular6_namespaceObject = __webpack_require__.p + "assets/img/popular6.png";
+;// CONCATENATED MODULE: ./src/components/popularItems.js
+
+
+
+
+
+
+var popularItems = function popularItems() {
+  var temp = document.createElement("template");
+  var products = [{
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular1_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular2_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular3_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular4_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular5_namespaceObject,
+    price: "45,743"
+  }, {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular6_namespaceObject,
+    price: "45,743"
+  }];
+  temp.innerHTML = "\n  <section class=\"popular\">\n    <div class=\"container\">\n      <div class=\"popular__header\">\n        <h2 class=\"popular__title\">Popular Items</h2>\n        <p class=\"popular__desc\">\n          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.\n        </p>\n      </div>\n      <div class=\"popular__products grid\">\n      ".concat(products.map(function (product) {
+    return "\n        <div class=\"popular__product\">\n          <div class=\"popular__product__body\">\n            <!-- <i class=\"fa-solid fa-heart\"></i> -->\n            <i class=\"fa-regular fa-heart\"></i>\n            <div class=\"popular__product__img\">\n              <img\n                src=\"".concat(product.img, "\"\n                alt=\"").concat(product.title, "\"\n              />\n            </div>\n            <button type=\"button\" class=\"btn popular__btn\">\n              Add to cart\n            </button>\n          </div>\n          <h3 class=\"popular__product__title\">\n            <a href=\"").concat(product.url, "\">").concat(product.title, "</a>\n          </h3>\n          <span class=\"popular__product__price\">$ ").concat(product.price, "</span>\n        </div>\n        ");
+  }).join(""), "\n      </div>\n      <a href=\"/\" type=\"button\" class=\"btn popular__more__btn\">View more products</a>\n    </div>\n  </section>\n  ");
+  return document.getElementById("js-main").appendChild(temp.content);
+};
+/* harmony default export */ const components_popularItems = (popularItems);
+;// CONCATENATED MODULE: ./src/index.js
+// Import Gallery Images
+
+
+
+
+// Import Styles
+
+
+// Import Components
+
+
+
+
+
+
+// Components
+components_navbar();
+components_hero();
+components_newArrivals();
+components_gallery([{
+  url: gallery1_namespaceObject,
+  alt: "gallery1"
+}, {
+  url: gallery2_namespaceObject,
+  alt: "gallery2"
+}, {
+  url: gallery3_namespaceObject,
+  alt: "gallery3"
+}, {
+  url: gallery4_namespaceObject,
+  alt: "gallery4"
+}], 2, 1, 20);
+components_popularItems();
+
+// Navbar
+var header = document.getElementsByTagName("header")[0];
+var menu = document.getElementById("menu");
+var menuBtn = document.getElementById("menu__toggler");
+var subMenuToggler = document.querySelectorAll(".sub__menu__toggler");
+var switchFixedNav = function switchFixedNav() {
+  // Check if screen is bigger than medium
+  console.log(window.innerWidth);
+  if (window.innerWidth > 992) {
+    // Check if user scrolled more than 200px
+    if (window.scrollY > 200) {
+      // Check if it already has a fixed class
+      if (header.classList.contains("fixed")) return;
+      header.style.opacity = 0;
+      // Wait until the opacity animation finishes to prevent the first plus animation
+      setTimeout(function () {
+        header.classList.remove("relative");
+        header.classList.add("fixed");
+      }, 300);
+      return setTimeout(function () {
+        return header.style.opacity = 1;
+      }, 800);
+    }
+    header.classList.add("relative");
+    header.classList.remove("fixed");
+    return setTimeout(function () {
+      return header.style.opacity = 1;
+    }, 700);
+  }
+  if (header.classList.contains("fixed")) {
+    header.classList.remove("fixed");
+  }
+};
+
+// Make Navbar Fixed after reaching specific point
+window.addEventListener("scroll", switchFixedNav);
+window.addEventListener("resize", switchFixedNav);
+
+// Toggle Navbar
+menuBtn.addEventListener("click", function () {
+  menu.classList.toggle("close");
+});
+
+// Toggle Navbar subitems
+subMenuToggler.forEach(function (parent) {
+  parent.addEventListener("click", function () {
+    if (window.innerWidth >= 991) return;
+    var subMenu = parent.querySelector(".sub__menu");
+    var openIcon = parent.querySelector(".fa-plus");
+    var closeIcon = parent.querySelector(".fa-minus");
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+    subMenu.classList.toggle("close");
+  }, true);
+});
+/******/ })()
+;

@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -9,8 +11,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /.s?css$/i,
+                use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader"],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -18,21 +20,11 @@ module.exports = {
             },
             {
                 test: /\.(?:js|mjs|cjs)$/,
+                loader: "babel-loader",
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            ['@babel/preset-env', { targets: "defaults" }]
-                        ],
-                    }
-                },
             },
         ],
-    },
-    resolve: {
-        extensions: ['*', '.js']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -46,6 +38,7 @@ module.exports = {
                 },
             ],
         }),
+        new MiniCssExtractPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
@@ -54,6 +47,10 @@ module.exports = {
         clean: true,
     },
     optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
+        ],
+        minimize: true,
         splitChunks: {
             chunks: 'all',
         }
