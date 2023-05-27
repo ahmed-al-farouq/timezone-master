@@ -22,12 +22,12 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
-            {
-                test: /\.(?:js|mjs|cjs)$/,
-                loader: "babel-loader",
-                include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules/,
-            },
+            // {
+            //     test: /\.(?:js|mjs|cjs)$/,
+            //     loader: "babel-loader",
+            //     include: path.resolve(__dirname, 'src'),
+            //     exclude: /node_modules/,
+            // },
         ],
     },
     plugins: [
