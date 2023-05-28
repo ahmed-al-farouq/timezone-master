@@ -76,10 +76,8 @@ const navbar = () => {
       </nav>
       <ul class="flex list--unstyled right__icons">
         <li>
-          <a href="/">
-            <span class="sr--only">Search</span>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
+          <span class="sr--only">Search</span>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </li>
         <li>
           <a href="/">
