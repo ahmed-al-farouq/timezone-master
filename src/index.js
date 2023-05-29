@@ -12,6 +12,7 @@ import hero from "./components/hero";
 import newArrivals from "./components/newArrivals";
 import gallery from "./components/gallery";
 import popularItems from "./components/popularItems";
+import footer from "./components/footer";
 
 // Components
 navbar();
@@ -41,6 +42,7 @@ gallery(
   20
 );
 popularItems();
+footer();
 
 // Navbar
 const header = document.getElementsByTagName("header")[0];

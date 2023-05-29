@@ -26,6 +26,8 @@
     "babel-loader": "^8.3.0",
     "copy-webpack-plugin": "^9.1.0",
     "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
     "style-loader": "^3.3.2",
     "terser-webpack-plugin": "^5.3.9",
     "url-loader": "^4.1.1",

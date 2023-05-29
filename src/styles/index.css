@@ -63,8 +63,8 @@ header {
 }
 
 header.fixed {
-  -webkit-box-shadow: 0 10px 15px rgba(25,25,25,0.1);
-  box-shadow: 0 10px 15px rgba(25,25,25,0.1);
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 }
 
 header .logo img {
@@ -103,17 +103,17 @@ header .logo img {
   max-height: 0;
 }
 
-.navbar .menu > li {
+.navbar .menu>li {
   position: relative;
   cursor: pointer;
   padding: 0 25px;
 }
 
-.navbar .menu > li:first-child {
+.navbar .menu>li:first-child {
   padding-top: 30px;
 }
 
-.navbar .menu > li:last-child {
+.navbar .menu>li:last-child {
   padding-bottom: 30px;
 }
 
@@ -217,11 +217,7 @@ header .right__icons li {
   gap: 20px;
 }
 
-.new-arrivals
-  .new-arrivals__products
-  .new-arrivals__product
-  .new-arrivals__product__title
-  a {
+.new-arrivals .new-arrivals__products .new-arrivals__product .new-arrivals__product__title a {
   display: block;
   width: 100%;
   color: #444444;
@@ -230,26 +226,16 @@ header .right__icons li {
   margin: 20px 0 12px 0;
 }
 
-.new-arrivals
-  .new-arrivals__products
-  .new-arrivals__product
-  .new-arrivals__product__img {
+.new-arrivals .new-arrivals__products .new-arrivals__product .new-arrivals__product__img {
   overflow: hidden;
 }
 
-.new-arrivals
-  .new-arrivals__products
-  .new-arrivals__product
-  .new-arrivals__product__img:hover
-  img {
+.new-arrivals .new-arrivals__products .new-arrivals__product .new-arrivals__product__img:hover img {
   transform: scale(1.04);
   transition: 0.4s ease-out;
 }
 
-.new-arrivals
-  .new-arrivals__products
-  .new-arrivals__product
-  .new-arrivals__product__price {
+.new-arrivals .new-arrivals__products .new-arrivals__product .new-arrivals__product__price {
   color: #ff2020;
   font-size: 18px;
   font-weight: 500;
@@ -333,11 +319,7 @@ header .right__icons li {
   position: relative;
 }
 
-.popular
-  .popular__products
-  .popular__product
-  .popular__product__body
-  .fa-heart {
+.popular .popular__products .popular__product .popular__product__body .fa-heart {
   font-size: 30px;
   position: absolute;
   top: 20px;
@@ -346,19 +328,11 @@ header .right__icons li {
   opacity: 0;
 }
 
-.popular
-  .popular__products
-  .popular__product
-  .popular__product__body:hover
-  .fa-heart {
+.popular .popular__products .popular__product .popular__product__body:hover .fa-heart {
   opacity: 1;
 }
 
-.popular
-  .popular__products
-  .popular__product
-  .popular__product__body
-  .popular__btn {
+.popular .popular__products .popular__product .popular__product__body .popular__btn {
   font-size: 16px;
   text-transform: none;
   padding: 0;
@@ -369,21 +343,13 @@ header .right__icons li {
   bottom: 0;
 }
 
-.popular
-  .popular__products
-  .popular__product
-  .popular__product__body:hover
-  .popular__btn {
+.popular .popular__products .popular__product .popular__product__body:hover .popular__btn {
   height: 15%;
   max-height: 1000px;
   padding: 12px 0;
 }
 
-.popular
-  .popular__products
-  .popular__product
-  .popular__product__body
-  .popular__btn:hover::before {
+.popular .popular__products .popular__product .popular__product__body .popular__btn:hover::before {
   display: none;
 }
 
@@ -404,9 +370,87 @@ header .right__icons li {
   margin-top: 50px;
   width: 250px;
 }
+
+/* Start Footer */
+footer {
+  padding-bottom: 60px;
+}
+
+footer .footer__cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+footer .footer__cols .footer__logo {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+footer .footer__cols p {
+  color: #868c98;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+footer .footer__cols h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+footer .footer__cols ul li {
+  margin-bottom: 10px;
+}
+
+footer .footer__cols ul li a {
+  color: #868c98;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+footer .footer__cols ul li:hover a {
+  display: block;
+  margin-left: 8px;
+  color: #ff2020;
+}
+
+footer .footer__copy__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .footer__copy__right p {
+  color: #888888;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+footer .footer__copy__right p .fa-heart,
+footer .footer__copy__right p a {
+  color: #ff2020;
+}
+
+footer .footer__social a {
+  margin: 0 8px;
+  font-size: 15px;
+  transition: 0.1s;
+}
+
+footer .footer__social a:hover {
+  color: #ff2020;
+}
+
 /* Start Media Queries
 ********************************************************/
 @media screen and (min-width: 576px) {
+
   /* Start Utilities */
   .container {
     max-width: 550px;
@@ -447,10 +491,16 @@ header .right__icons li {
     grid-column: 2 / span 1;
     grid-row: 4 / span 2;
   }
+
+  /* Start Footer */
+  footer .footer__cols {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Styles for tablet and above screens */
 @media screen and (min-width: 768px) {
+
   /* Start Utilities */
   .container {
     max-width: 765px;
@@ -487,11 +537,7 @@ header .right__icons li {
     grid-template: auto / auto auto auto;
   }
 
-  .new-arrivals
-    .new-arrivals__products
-    .new-arrivals__product
-    .new-arrivals__product__title
-    a {
+  .new-arrivals .new-arrivals__products .new-arrivals__product .new-arrivals__product__title a {
     font-size: 24px;
   }
 
@@ -512,10 +558,28 @@ header .right__icons li {
   .popular .popular__products .popular__product .popular__product__price {
     font-size: 18px;
   }
+
+  /* Start Footer */
+  footer .footer__cols {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  footer .footer__copy__right {
+    flex-wrap: nowrap;
+  }
+
+  footer .footer__copy__right p {
+    margin-bottom: 0;
+  }
+
+  footer .footer__social a {
+    font-size: 18px;
+  }
 }
 
 /* Styles for desktop and above */
 @media screen and (min-width: 992px) {
+
   /* Start Utilities */
   .container {
     max-width: 960px;
@@ -548,15 +612,15 @@ header .right__icons li {
     max-height: 1500px;
   }
 
-  .navbar .menu > li:hover {
+  .navbar .menu>li:hover {
     color: #ff2020;
   }
 
-  .navbar .menu > li:first-child {
+  .navbar .menu>li:first-child {
     padding-top: 0;
   }
 
-  .navbar .menu > li:last-child {
+  .navbar .menu>li:last-child {
     padding-bottom: 0;
   }
 
@@ -670,10 +734,16 @@ header .right__icons li {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+
+  /* Start Footer */
+  footer .footer__cols {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* Style for large screens */
 @media screen and (min-width: 1200px) {
+
   /* Start Utilities */
   .container {
     max-width: 1170px;

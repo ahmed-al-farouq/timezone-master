@@ -21,10 +21,35 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: "url-loader",
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/assets/img",
+            },
+          },
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 80,
+              },
+              pngquant: {
+                quality: [0.65, 0.69],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
+          },
+        ],
       },
+
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, "src"),
         loader: "babel-loader",
