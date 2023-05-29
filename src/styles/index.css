@@ -492,6 +492,11 @@ footer .footer__social a:hover {
     grid-row: 4 / span 2;
   }
 
+  /* Start Popluar Items */
+  .popular .popular__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* Start Footer */
   footer .footer__cols {
     grid-template-columns: 1fr 1fr;
@@ -542,11 +547,6 @@ footer .footer__social a:hover {
   }
 
   /* Start Popular Items  */
-  .popular .popular__products {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
   .popular .popular__header {
     max-width: 83.333333%;
   }
