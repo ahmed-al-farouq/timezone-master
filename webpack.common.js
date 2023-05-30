@@ -44,8 +44,8 @@ module.exports = {
                 interlaced: false,
               },
               webp: {
-                quality: 75
-              }
+                quality: 75,
+              },
             },
           },
         ],
