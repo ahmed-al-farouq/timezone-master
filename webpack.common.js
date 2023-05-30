@@ -23,10 +23,11 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: "url-loader",
             options: {
-              name: "[name].[ext]",
-              outputPath: "/assets/img",
+              limit: 20192, // Limit for inlining images as base64 data URLs 20KB
+              name: "assets/img/[name].[ext]", // Output path and file name for images
+              fallback: "file-loader", // Use file-loader for larger images
             },
           },
           {
@@ -50,7 +51,18 @@ module.exports = {
           },
         ],
       },
-
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "name.[ext]",
+              outputPath: "/assets/fonts",
+            },
+          },
+        ],
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -79,7 +91,7 @@ module.exports = {
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
       "@img": path.resolve(__dirname, "src/assets/img"),
-    }
+    },
   },
   optimization: {
     splitChunks: {
