@@ -10,6 +10,17 @@ import popularItems from "./components/popularItems";
 import footer from "./components/footer";
 // Lazy Loading
 import lozad from "lozad";
+// Import Images
+import popular1 from "./assets/img/popular1.jpg";
+import popular2 from "./assets/img/popular2.jpg";
+import popular3 from "./assets/img/popular3.jpg";
+import popular4 from "./assets/img/popular4.jpg";
+import popular5 from "./assets/img/popular5.jpg";
+import popular6 from "./assets/img/popular6.jpg";
+import gallery1 from "./assets/img/gallery1.jpg";
+import gallery2 from "./assets/img/gallery2.jpg";
+import gallery3 from "./assets/img/gallery3.jpg";
+import gallery4 from "./assets/img/gallery4.jpg";
 
 const galleryItems = [
   {
