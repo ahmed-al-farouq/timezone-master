@@ -1,4 +1,4 @@
-import watch from "../assets/img/watch.png";
+import watch from "@img/watch.png";
 
 const hero = () => {
   const temp = document.createElement("template");

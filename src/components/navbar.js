@@ -1,4 +1,4 @@
-import logo from "../assets/img/logo.png";
+import logo from "@img/logo.png";
 
 const navbar = () => {
   const main = document.getElementById("js-main");
