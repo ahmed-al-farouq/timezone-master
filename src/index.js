@@ -1,5 +1,3 @@
-// Import Gallery Images
-import galleryItems from "./JSON/gallery.json";
 // Import Styles
 import "./styles/index.css";
 import "./styles/utilities.css";
@@ -10,16 +8,73 @@ import newArrivals from "./components/newArrivals";
 import gallery from "./components/gallery";
 import popularItems from "./components/popularItems";
 import footer from "./components/footer";
-import lozad from "lozad";
 // Lazy Loading
+import lozad from "lozad";
 
+const galleryItems = [
+  {
+    url: gallery1,
+    alt: "gallery1",
+  },
+  {
+    url: gallery2,
+    alt: "gallery2",
+  },
+  {
+    url: gallery3,
+    alt: "gallery3",
+  },
+  {
+    url: gallery4,
+    alt: "gallery4",
+  },
+];
+
+const products = [
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular1,
+    price: "45,743",
+  },
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular2,
+    price: "45,743",
+  },
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular3,
+    price: "45,743",
+  },
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular4,
+    price: "45,743",
+  },
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular5,
+    price: "45,743",
+  },
+  {
+    title: "Thermo Ball Etip Gloves",
+    url: "/",
+    img: popular6,
+    price: "45,743",
+  },
+];
 
 // Components
 navbar();
 hero();
-newArrivals();
+newArrivals(products);
 gallery(galleryItems);
-popularItems();
+popularItems(products);
 footer();
 
 /* Navbar
@@ -83,7 +138,5 @@ subMenuToggler.forEach((parent) => {
 });
 
 // Initialize the lazy loading library
-const observer = lozad(document.querySelectorAll(".lozad")); // lazy loads elements with default selector as '.lozad'
+const observer = lozad(document.querySelectorAll(".lozad"));
 observer.observe();
-
-console.log(observer)

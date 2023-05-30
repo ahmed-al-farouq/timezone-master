@@ -1,50 +1,5 @@
-import popular1 from "../assets/img/popular1.jpg";
-import popular2 from "../assets/img/popular2.jpg";
-import popular3 from "../assets/img/popular3.jpg";
-import popular4 from "../assets/img/popular4.jpg";
-import popular5 from "../assets/img/popular5.jpg";
-import popular6 from "../assets/img/popular6.jpg";
-
-const popularItems = () => {
+const popularItems = (products) => {
   const temp = document.createElement("template");
-  const products = [
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular1,
-      price: "45,743",
-    },
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular2,
-      price: "45,743",
-    },
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular3,
-      price: "45,743",
-    },
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular4,
-      price: "45,743",
-    },
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular5,
-      price: "45,743",
-    },
-    {
-      title: "Thermo Ball Etip Gloves",
-      url: "/",
-      img: popular6,
-      price: "45,743",
-    },
-  ];
   temp.innerHTML = `
   <section class="popular">
     <div class="container">
@@ -65,8 +20,7 @@ const popularItems = () => {
             <i class="fa-regular fa-heart"></i>
             <div class="popular__product__img">
               <img
-                class="lozad"
-                data-src="${product.img}"
+                src="${product.img}"
                 alt="${product.title}"
               />
             </div>
