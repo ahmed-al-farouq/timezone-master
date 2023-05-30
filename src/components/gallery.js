@@ -1,11 +1,14 @@
-const gallery = (photos, rows, columns, gap) => {
+const gallery = (items) => {
   const main = document.getElementById("js-main");
   const temp = document.createElement("template");
   temp.innerHTML = `
     <section class="gallery grid">
-      ${photos.map(
-        (photo) => `<div class="gallery__item"><img src="${photo.url}" alt="${photo.alt}" /></div>`
-      ).join('')}
+      ${items
+        .map(
+          (item) =>
+            `<div class="gallery__item"><img class="lozad" data-src="${item.url}" alt="${item.alt}" /></div>`
+        )
+        .join("")}
     </section>
   `;
   return main.appendChild(temp.content);

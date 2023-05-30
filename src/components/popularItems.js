@@ -65,7 +65,8 @@ const popularItems = () => {
             <i class="fa-regular fa-heart"></i>
             <div class="popular__product__img">
               <img
-                src="${product.img}"
+                class="lozad"
+                data-src="${product.img}"
                 alt="${product.title}"
               />
             </div>

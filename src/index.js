@@ -1,8 +1,5 @@
 // Import Gallery Images
-import gallery1 from "./assets/img/gallery1.jpg";
-import gallery2 from "./assets/img/gallery2.jpg";
-import gallery3 from "./assets/img/gallery3.jpg";
-import gallery4 from "./assets/img/gallery4.jpg";
+import galleryItems from "./JSON/gallery.json";
 // Import Styles
 import "./styles/index.css";
 import "./styles/utilities.css";
@@ -13,38 +10,20 @@ import newArrivals from "./components/newArrivals";
 import gallery from "./components/gallery";
 import popularItems from "./components/popularItems";
 import footer from "./components/footer";
+import lozad from "lozad";
+// Lazy Loading
+
 
 // Components
 navbar();
 hero();
 newArrivals();
-gallery(
-  [
-    {
-      url: gallery1,
-      alt: "gallery1",
-    },
-    {
-      url: gallery2,
-      alt: "gallery2",
-    },
-    {
-      url: gallery3,
-      alt: "gallery3",
-    },
-    {
-      url: gallery4,
-      alt: "gallery4",
-    },
-  ],
-  2,
-  1,
-  20
-);
+gallery(galleryItems);
 popularItems();
 footer();
 
-// Navbar
+/* Navbar
+ *************************************************************************/
 const header = document.getElementsByTagName("header")[0];
 const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menu__toggler");
@@ -52,7 +31,6 @@ const subMenuToggler = document.querySelectorAll(".sub__menu__toggler");
 
 const switchFixedNav = () => {
   // Check if screen is bigger than medium
-  console.log(window.innerWidth);
   if (window.innerWidth > 992) {
     // Check if user scrolled more than 200px
     if (window.scrollY > 200) {
@@ -103,3 +81,9 @@ subMenuToggler.forEach((parent) => {
     true
   );
 });
+
+// Initialize the lazy loading library
+const observer = lozad(document.querySelectorAll(".lozad")); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+
+console.log(observer)

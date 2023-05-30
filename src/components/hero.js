@@ -14,7 +14,7 @@ const hero = () => {
           <a href="/" class="btn hero__btn">Shop Now</a>
         </div>
         <div class="hero__img">
-          <img src="${watch}" alt="watch" class="block" />
+          <img class="lozad block" data-src="${watch}" alt="watch" />
         </div>
       </div>
     </section>

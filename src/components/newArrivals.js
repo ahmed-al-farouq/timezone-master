@@ -35,7 +35,8 @@ const newArrivals = () => {
           <div class="new-arrivals__product__img">
             <a href="${product.url}" class="block">
               <img
-                src="${product.img}"
+                class="lozad"
+                data-src="${product.img}"
                 alt="${product.title}"
               />
             </a>
