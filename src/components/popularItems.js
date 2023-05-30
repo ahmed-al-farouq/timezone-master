@@ -1,9 +1,9 @@
-import popular1 from "../assets/img/popular1.png";
-import popular2 from "../assets/img/popular2.png";
-import popular3 from "../assets/img/popular3.png";
-import popular4 from "../assets/img/popular4.png";
-import popular5 from "../assets/img/popular5.png";
-import popular6 from "../assets/img/popular6.png";
+import popular1 from "../assets/img/popular1.jpg";
+import popular2 from "../assets/img/popular2.jpg";
+import popular3 from "../assets/img/popular3.jpg";
+import popular4 from "../assets/img/popular4.jpg";
+import popular5 from "../assets/img/popular5.jpg";
+import popular6 from "../assets/img/popular6.jpg";
 
 const popularItems = () => {
   const temp = document.createElement("template");

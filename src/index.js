@@ -1,8 +1,8 @@
 // Import Gallery Images
-import gallery1 from "./assets/img/gallery1.png";
-import gallery2 from "./assets/img/gallery2.png";
-import gallery3 from "./assets/img/gallery3.png";
-import gallery4 from "./assets/img/gallery4.png";
+import gallery1 from "./assets/img/gallery1.jpg";
+import gallery2 from "./assets/img/gallery2.jpg";
+import gallery3 from "./assets/img/gallery3.jpg";
+import gallery4 from "./assets/img/gallery4.jpg";
 // Import Styles
 import "./styles/index.css";
 import "./styles/utilities.css";

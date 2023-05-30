@@ -1,6 +1,6 @@
-import product1 from "../assets/img/new_product1.png";
-import product2 from "../assets/img/new_product2.png";
-import product3 from "../assets/img/new_product3.png";
+import product1 from "../assets/img/new_product1.jpg";
+import product2 from "../assets/img/new_product2.jpg";
+import product3 from "../assets/img/new_product3.jpg";
 
 const newArrivals = () => {
   const temp = document.createElement("template");
