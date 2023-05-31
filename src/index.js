@@ -7,6 +7,7 @@ import hero from "@components/hero";
 import newArrivals from "@components/newArrivals";
 import gallery from "@components/gallery";
 import popularItems from "@components/popularItems";
+import videoArea from "@components/videoArea";
 import footer from "@components/footer";
 // Lazy Loading
 import lozad from "lozad";
@@ -110,7 +111,12 @@ hero();
 newArrivals(newArrivalsItems);
 gallery(galleryItems);
 popularItems(products);
+videoArea();
 footer();
+
+// Initialize the lazy loading library
+const observer = lozad(document.querySelectorAll(".lozad"));
+observer.observe();
 
 /* Navbar
  *************************************************************************/
@@ -172,6 +178,11 @@ subMenuToggler.forEach((parent) => {
   );
 });
 
-// Initialize the lazy loading library
-const observer = lozad(document.querySelectorAll(".lozad"));
-observer.observe();
+/* Toggle Video Area
+ *************************************************************************/
+const video = document.querySelector(".video-area .video__container");
+const playBtn = document.querySelector(".video-area .play__btn__container");
+
+playBtn.addEventListener("click", () => {
+  video.style.display = "flex";
+});

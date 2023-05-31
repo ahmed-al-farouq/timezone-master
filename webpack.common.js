@@ -8,7 +8,7 @@ module.exports = {
     app: path.resolve(__dirname, "./src/index.js"),
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/img/[name][ext]",
     clean: true,
@@ -16,18 +16,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.s?css$/i,
+        test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpe?g|gif)$/i,
         use: [
           {
             loader: "url-loader",
             options: {
               limit: 20192, // Limit for inlining images as base64 data URLs 20KB
-              name: "assets/img/[name].[ext]", // Output path and file name for images
-              fallback: "file-loader", // Use file-loader for larger images
+              fallback: "file-loader",
+              name: 'assets/img/[name].[contenthash].[ext]',
             },
           },
           {
