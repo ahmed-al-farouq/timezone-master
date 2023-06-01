@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -27,7 +26,7 @@ module.exports = {
             options: {
               limit: 20192, // Limit for inlining images as base64 data URLs 20KB
               fallback: "file-loader",
-              name: 'assets/img/[name].[contenthash].[ext]',
+              name: "assets/img/[name].[contenthash].[ext]",
             },
           },
           {
@@ -98,6 +97,5 @@ module.exports = {
       chunks: "all",
     },
     minimize: true,
-    minimizer: [new TerserPlugin()],
   },
 };
