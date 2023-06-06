@@ -87,6 +87,7 @@ module.exports = {
     }),
   ],
   resolve: {
+    extensions: [".js", ".png", ".jpg"],
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
       "@img": path.resolve(__dirname, "src/assets/img"),

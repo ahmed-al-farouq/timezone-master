@@ -396,6 +396,16 @@ header .right__icons li {
   opacity: 1;
 }
 
+.video-area .fa-rectangle-xmark {
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #ffffff;
+  z-index: 5;
+}
+
 .video-area .video__container {
   position: fixed;
   top: 0;
@@ -407,7 +417,6 @@ header .right__icons li {
   justify-content: center;
   align-items: center;
   z-index: 3;
-  display: none;
 }
 
 .video-area .video__container iframe {

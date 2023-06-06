@@ -12,19 +12,19 @@ import footer from "@components/footer";
 // Lazy Loading
 import lozad from "lozad";
 // Import Images
-import arrival1 from "@img/new_product1.jpg";
-import arrival2 from "@img/new_product2.jpg";
-import arrival3 from "@img/new_product3.jpg";
-import popular1 from "@img/popular1.jpg";
-import popular2 from "@img/popular2.jpg";
-import popular3 from "@img/popular3.jpg";
-import popular4 from "@img/popular4.jpg";
-import popular5 from "@img/popular5.jpg";
-import popular6 from "@img/popular6.jpg";
-import gallery1 from "@img/gallery1.jpg";
-import gallery2 from "@img/gallery2.jpg";
-import gallery3 from "@img/gallery3.jpg";
-import gallery4 from "@img/gallery4.jpg";
+import arrival1 from "@img/new_product1";
+import arrival2 from "@img/new_product2";
+import arrival3 from "@img/new_product3";
+import popular1 from "@img/popular1";
+import popular2 from "@img/popular2";
+import popular3 from "@img/popular3";
+import popular4 from "@img/popular4";
+import popular5 from "@img/popular5";
+import popular6 from "@img/popular6";
+import gallery1 from "@img/gallery1";
+import gallery2 from "@img/gallery2";
+import gallery3 from "@img/gallery3";
+import gallery4 from "@img/gallery4";
 
 const newArrivalsItems = [
   {
@@ -180,9 +180,34 @@ subMenuToggler.forEach((parent) => {
 
 /* Toggle Video Area
  *************************************************************************/
-const video = document.querySelector(".video-area .video__container");
+const videoAreaElement = document.querySelector(".video-area");
 const playBtn = document.querySelector(".video-area .play__btn__container");
 
+// Show Popup
 playBtn.addEventListener("click", () => {
-  video.style.display = "flex";
+  // Append Iframe
+  const temp = document.createElement("template");
+  temp.innerHTML = `
+    <div class="video__container">
+      <i class="fa-solid fa-rectangle-xmark"></i>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/B-187sc5e3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    </div>
+  `;
+  videoAreaElement.appendChild(temp.content);
+
+  //  Delete Iframe
+  const closeIcon = document.querySelector(
+    ".video__container .fa-rectangle-xmark"
+  );
+  const videoContainer = document.querySelector(".video__container");
+  closeIcon.addEventListener("click", () => videoContainer.remove());
+});
+
+// Hide Popup
+videoAreaElement.addEventListener("click", (e) => {
+  if (e.target.classList.contains("video__container")) {
+    const videoContainer = document.querySelector(".video__container");
+    videoContainer.remove();
+  }
 });
